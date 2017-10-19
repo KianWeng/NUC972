@@ -16,6 +16,7 @@
 *.patch
 *.bin
 *.cfgtmp
+*.cmd
 
 # Build tree
 /build-*
@@ -44,6 +45,7 @@ uboot/u-boot.ais
 uboot/u-boot.dtb
 uboot/u-boot.sb
 uboot/u-boot.geany
+uboot/board/nuvoton/nuc970evb/config.tmp
 
 #
 # Generated files
@@ -73,3 +75,54 @@ cscope.*
 
 # spl ais files
 uboot/spl/*.ais
+
+#image
+image/970image
+image/970image.zip
+image/970uimage
+
+#linux
+linux-3.10.x/.config
+linux-3.10.x/.missing-syscalls.d
+linux-3.10.x/.tmp_System.map
+linux-3.10.x/.tmp_vmlinux1
+linux-3.10.x/.tmp_vmlinux2
+linux-3.10.x/.version
+linux-3.10.x/Module.symvers
+linux-3.10.x/System.map
+linux-3.10.x/arch/arm/boot/Image
+linux-3.10.x/arch/arm/boot/compressed/ashldi3.S
+linux-3.10.x/arch/arm/boot/compressed/lib1funcs.S
+linux-3.10.x/arch/arm/boot/compressed/piggy.gzip
+linux-3.10.x/arch/arm/boot/compressed/vmlinux
+linux-3.10.x/arch/arm/boot/compressed/vmlinux.lds
+linux-3.10.x/arch/arm/boot/uImage
+linux-3.10.x/arch/arm/boot/zImage
+linux-3.10.x/arch/arm/kernel/vmlinux.lds
+linux-3.10.x/drivers/tty/vt/consolemap_deftbl.c
+linux-3.10.x/drivers/tty/vt/defkeymap.c
+linux-3.10.x/kernel/bounds.s
+linux-3.10.x/kernel/hz.bc
+linux-3.10.x/kernel/timeconst.h
+linux-3.10.x/lib/crc32table.h
+linux-3.10.x/lib/gen_crc32table
+linux-3.10.x/scripts/basic/fixdep
+linux-3.10.x/scripts/conmakehash
+linux-3.10.x/scripts/kallsyms
+linux-3.10.x/scripts/kconfig/conf
+linux-3.10.x/scripts/kconfig/zconf.hash.c
+linux-3.10.x/scripts/kconfig/zconf.lex.c
+linux-3.10.x/scripts/kconfig/zconf.tab.c
+linux-3.10.x/scripts/mod/devicetable-offsets.h
+linux-3.10.x/scripts/mod/devicetable-offsets.s
+linux-3.10.x/scripts/mod/elfconfig.h
+linux-3.10.x/scripts/mod/mk_elfconfig
+linux-3.10.x/scripts/mod/modpost
+linux-3.10.x/scripts/sortextable
+linux-3.10.x/usr/.initramfs_data.cpio.d
+linux-3.10.x/usr/gen_init_cpio
+linux-3.10.x/usr/initramfs_data.cpio
+linux-3.10.x/vmlinux
+linux-3.10.x/arch/arm/include/generated/*
+linux-3.10.x/include/config/*
+linux-3.10.x/include/generated/*
