@@ -1,0 +1,75 @@
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# Normal rules
+#
+
+*.rej
+*.orig
+*.a
+*.o
+*.su
+*~
+*.swp
+*.patch
+*.bin
+*.cfgtmp
+
+# Build tree
+/build-*
+
+#
+# Top-level generic files
+#
+
+uboot/MLO
+uboot/System.map
+uboot/u-boot
+uboot/u-boot.hex
+uboot/u-boot.imx
+uboot/u-boot.map
+uboot/u-boot.srec
+uboot/u-boot.ldr
+uboot/u-boot.ldr.hex
+uboot/u-boot.ldr.srec
+uboot/u-boot.img
+uboot/u-boot.kwb
+uboot/u-boot.sha1
+uboot/u-boot.dis
+uboot/u-boot.lds
+uboot/u-boot.ubl
+uboot/u-boot.ais
+uboot/u-boot.dtb
+uboot/u-boot.sb
+uboot/u-boot.geany
+
+#
+# Generated files
+#
+
+*.depend*
+uboot/LOG
+uboot/errlog
+uboot/reloc_off
+
+uboot/include/generated/
+asm-offsets.s
+
+# stgit generated dirs
+patches-*
+.stgit-edit.txt
+
+# quilt's files
+patches
+series
+
+# gdb files
+.gdb_history
+
+# cscope files
+cscope.*
+
+# spl ais files
+uboot/spl/*.ais
