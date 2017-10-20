@@ -61,7 +61,7 @@
 
 #define CONFIG_DISPLAY_CPUINFO
 
-#define CONFIG_BOOTDELAY	0
+#define CONFIG_BOOTDELAY	2
 
 #define CONFIG_SYS_SDRAM_BASE   0
 #define CONFIG_NR_DRAM_BANKS    2     // there are 2 sdram banks for nuc970
@@ -265,6 +265,7 @@
 #define CONFIG_STACKSIZE	(32*1024)	/* regular stack */
 
 #define CONFIG_EXTRA_ENV_SETTINGS \
+		"watchdog=off\0" \
         "uimage=eth2uart.ub\0" \
         "bootcmd=fatload mmc 0 0x7fc0 ${uimage}; bootm 0x7fc0; sf probe 0 18000000; sf read 0x7fc0 0x200000 0x780000; bootm 0x7fc0\0" \
 
