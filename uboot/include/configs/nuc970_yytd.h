@@ -46,7 +46,7 @@
 //#define CONFIG_NUC970_HW_CHECKSUM
 
 #define CONFIG_SYS_USE_SPIFLASH
-//#define CONFIG_SYS_USE_NANDFLASH
+#define CONFIG_SYS_USE_NANDFLASH
 #define CONFIG_SYS_NO_FLASH    // that is, no *NOR* flash 
 //#define CONFIG_ENV_IS_IN_NAND 
 #define CONFIG_ENV_IS_IN_SPI_FLASH 
@@ -133,8 +133,8 @@
 #define MTDPARTS_DEFAULT "mtdparts=nand0:0x200000@0x0(u-boot),0x1400000@0x200000(kernel),-(user)"
 #define MTD_ACTIVE_PART "nand0,2"
 
-//#define CONFIG_CMD_NAND_YAFFS2 1
-//#define CONFIG_YAFFS2          1
+#define CONFIG_CMD_NAND_YAFFS2 1
+#define CONFIG_YAFFS2          1
 #define CONFIG_SYS_MAX_NAND_DEVICE	1
 #define CONFIG_SYS_NAND_BASE	0xB000D000
 #define CONFIG_SYS_NAND_ECCBYTES        12
@@ -189,7 +189,7 @@
 #define CONFIG_CMD_SF           1
 #define CONFIG_SPI              1
 #define CONFIG_SPI_FLASH        1
-//#define CONFIG_SPI_FLASH_MACRONIX   1
+#define CONFIG_SPI_FLASH_MACRONIX   1
 #define CONFIG_SPI_FLASH_WINBOND   1
 #define CONFIG_SPI_FLASH_EON 1
 #ifdef CONFIG_ENV_IS_IN_SPI_FLASH
