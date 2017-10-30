@@ -1489,6 +1489,44 @@ static struct platform_device iio_gpio_trigger = {
 };
 #endif
 
+#if defined(CONFIG_LEDS_GPIO) || defined(CONFIG_LEDS_GPIO_MODULE)
+#include <linux/leds.h>
+#include <linux/gpio.h>
+
+static struct gpio_led gpio_leds[] = {
+    {
+        .name = "system",
+        .gpio = NUC970_PD7, // prot D07
+        .default_state = LEDS_GPIO_DEFSTATE_ON, // 默认LED亮
+        .active_low = 1, // 低电平亮
+        .default_trigger = "timer", // 触发器位timer
+    },
+    /*
+    {
+        .name = "usr",
+        .gpio = 34,
+        .default_state = LEDS_GPIO_DEFSTATE_ON, 
+        .active_low = 1,
+        .default_trigger = "heartbeat", 
+    },
+    */
+};
+
+static struct gpio_led_platform_data gpio_led_info = {
+     .leds          = gpio_leds,
+     .num_leds     = ARRAY_SIZE(gpio_leds),
+};
+
+static struct platform_device leds = {	
+	.name			= "leds-gpio",	
+	.id				= -1,	
+	.dev			= {		
+		.platform_data	= &gpio_led_info,	
+	},
+};
+#endif
+
+
 static struct platform_device *nuc970_public_dev[] __initdata = {
         &nuc970_serial_device0,
 
@@ -1658,6 +1696,10 @@ static struct platform_device *nuc970_public_dev[] __initdata = {
 
 #if defined(CONFIG_IIO_GPIO_TRIGGER) || defined(CONFIG_IIO_GPIO_TRIGGER_MODULE)
     &iio_gpio_trigger,
+#endif
+
+#if defined(CONFIG_LEDS_GPIO) || defined(CONFIG_LEDS_GPIO_MODULE)
+	&leds
 #endif
 };
 
